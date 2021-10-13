@@ -1,0 +1,100 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    background-color: aliceblue;
+}
+
+h1 {
+    color: #575F7D;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+#avatar{
+    width: 150px;
+    border-radius: 50%;
+}
+.container{
+    width: 700px;
+    margin: 0 auto;
+}
+
+p {
+    font-family: 'Pacifico', cursive;
+    color: #575F7D;
+    font-size: 20px;
+    font-weight: thin;
+    margin-bottom: 40px;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #ab4a1a;
+    font-weight: 600;
+    font-size: 16px;
+    list-style: none;
+}
+
+a:hover{
+    color: black;
+}
+
+li {
+    display: inline-block;
+    padding: 0px auto;
+  }
+.btn-blue {
+    color:  white;
+    background-color: #043d0b;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+}
+
+h2 {
+    color: #0e6e1d;
+    font-size: 20px;
+    font-weight: 800;
+}
+.social-link{
+    font-size: 30px;
+    color: #bab1ad;
+}
+
+div{
+    background-color: #fff;
+    text-align: center;
+    width: 700px;
+    margin: 10px auto;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 960px) {
+    /* For a screen < 960px, this CSS will be read */
+    .container {
+      width: 700px;
+    }
+  }
+  @media (max-width: 720px) {
+    /* For a screen < 720px, this CSS will be read */
+    .container {
+      width: 500px;
+    }
+  }
+  @media (max-width: 540px) {
+    /* For a screen < 540px, this CSS will be read */
+    .container {
+      width: 300px;
+    }
+  }
