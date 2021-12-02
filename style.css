@@ -29,6 +29,14 @@ p {
     margin-bottom: 40px;
 }
 
+p a {
+font-family: 'Pacifico', cursive;
+color: #575F7D;
+font-size: 20px;
+font-weight: thin;
+margin-bottom: 40px;
+}
+
 a {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -78,6 +86,10 @@ div{
 ul {
     margin: 0;
     padding: 0;
+}
+
+.container {
+  margin-top: 5px;
 }
 
 @media (max-width: 960px) {
