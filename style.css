@@ -6,11 +6,63 @@ body{
     background-color: aliceblue;
 }
 
-h1 {
-    color: #575F7D;
-    font-size: 32px;
-    font-weight: 900;
-}
+
+    :root {
+      --number-of-characters: 21;
+    }
+
+    h1 {
+      position: relative;
+      display: inline-block;
+      color: #0e6e1d;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    h1::before, h1::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    h1::before {
+      background: white;
+      opacity: 1;
+      -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
+              animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
+    }
+    h1::after {
+      width: 3px;
+      background: black;
+      -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards,
+        blink 1.3s steps(var(--number-of-characters)) infinite;
+              animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards,
+        blink 1.3s steps(var(--number-of-characters)) infinite;
+    }
+    @-webkit-keyframes typewriter {
+      to {
+        left: 100%;
+      }
+    }
+    @keyframes typewriter {
+      to {
+        left: 100%;
+      }
+    }
+    @-webkit-keyframes blink {
+      0%  {background: black;}
+      49%  {background: black;}
+      50%  {background: transparent;}
+      100%  {background: transparent;}
+    }
+    @keyframes blink {
+      0%  {background: black;}
+      49%  {background: black;}
+      50%  {background: transparent;}
+      100%  {background: transparent;}
+    } 
+
 
 #avatar{
     width: 150px;
@@ -19,6 +71,13 @@ h1 {
 .container{
     width: 700px;
     margin: 0 auto;
+    background-color: #fff;
+    text-align: center;
+    width: 700px;
+    margin: 10px auto;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
 }
 
 p {
@@ -27,6 +86,14 @@ p {
     font-size: 20px;
     font-weight: thin;
     margin-bottom: 40px;
+}
+
+p a {
+font-family: 'Pacifico', cursive;
+color: #575F7D;
+font-size: 20px;
+font-weight: thin;
+margin-bottom: 40px;
 }
 
 a {
@@ -38,6 +105,9 @@ a {
     list-style: none;
 }
 
+
+
+
 a:hover{
     color: black;
 }
@@ -46,6 +116,7 @@ li {
     display: inline-block;
     padding: 0px auto;
   }
+  
 .btn-blue {
     color:  white;
     background-color: #043d0b;
@@ -65,19 +136,15 @@ h2 {
     color: #bab1ad;
 }
 
-div{
-    background-color: #fff;
-    text-align: center;
-    width: 700px;
-    margin: 10px auto;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
-}
+
 
 ul {
     margin: 0;
     padding: 0;
+}
+
+.container {
+  margin-top: 5px;
 }
 
 @media (max-width: 960px) {
@@ -98,3 +165,41 @@ ul {
       width: 300px;
     }
   }
+
+
+  
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+    height: 32px;
+    position: absolute;
+    right: 150px;
+  }
+  .burger .dash {
+    width: 50px;
+    height: 5px;
+    background: black;
+    border-radius: 20px;
+    transition: 0.25s;
+  }
+  
+  .burger .dash:nth-of-type(4) {
+  
+    top: calc(5vh - 5px);
+  }
+  .activebrgr .dash:nth-of-type(4) {
+    opacity: 0;
+  }
+  .activebrgr .dash:nth-of-type(1) {
+    opacity: 0;
+  }
+  .activebrgr .dash:nth-of-type(3) {
+    transform: rotate(45deg);
+  }
+  .activebrgr .dash:nth-of-type(2) {
+    transform: rotate(-45deg);
+  }
+  
