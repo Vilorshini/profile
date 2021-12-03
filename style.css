@@ -3,95 +3,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body{
-    background-color: aliceblue;
+    background-color: #031321;
+}
+#writinganimation
+
+.the-type {
+  width: 80%;
+  margin: 0 auto;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  display: inline;
+  margin-bottom: 10px;
+ 
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+  border-right-style: solid;
+  border-width: 2px;
+  
 }
 
+h1 {
+  color: #575F7D;
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+}
 
-    :root {
-      --number-of-characters: 21;
-    }
-
-    h1 {
-      position: relative;
-      display: inline-block;
-      color: #0e6e1d;
-      font-size: 20px;
-      font-weight: 800;
-    }
-    h1::before, h1::after {
-      position: absolute;
-      content: '';
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-    h1::before {
-      background: white;
-      opacity: 1;
-      -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
-              animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
-    }
-    h1::after {
-      width: 3px;
-      background: black;
-      -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards,
-        blink 1.3s steps(var(--number-of-characters)) infinite;
-              animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards,
-        blink 1.3s steps(var(--number-of-characters)) infinite;
-    }
-    @-webkit-keyframes typewriter {
-      to {
-        left: 100%;
-      }
-    }
-    @keyframes typewriter {
-      to {
-        left: 100%;
-      }
-    }
-    @-webkit-keyframes blink {
-      0%  {background: black;}
-      49%  {background: black;}
-      50%  {background: transparent;}
-      100%  {background: transparent;}
-    }
-    @keyframes blink {
-      0%  {background: black;}
-      49%  {background: black;}
-      50%  {background: transparent;}
-      100%  {background: transparent;}
-    } 
-
+h3 {
+  color: #0e6e1d;
+  font-size: 20px;
+  font-weight: 800;
+}
 
 #avatar{
     width: 150px;
     border-radius: 50%;
+    margin-top: 20px;
 }
 .container{
-    width: 700px;
-    margin: 0 auto;
-    background-color: #fff;
+    
+    margin-top: 8px;
     text-align: center;
-    width: 700px;
-    margin: 10px auto;
+    width: 100%;
+    margin-bottom: 10px;
     padding: 40px 20px;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 10;
+    height: 43vh;
 }
 
 p {
     font-family: 'Pacifico', cursive;
     color: #575F7D;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: thin;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    align-items: center;
 }
 
 p a {
 font-family: 'Pacifico', cursive;
 color: #575F7D;
-font-size: 20px;
+font-size: 30px;
 font-weight: thin;
 margin-bottom: 40px;
 }
@@ -105,8 +82,10 @@ a {
     list-style: none;
 }
 
-
-
+.project {
+  margin-top: 400px;
+  
+}
 
 a:hover{
     color: black;
@@ -117,14 +96,7 @@ li {
     padding: 0px auto;
   }
   
-.btn-blue {
-    color:  white;
-    background-color: #043d0b;
-    font-weight: 900;
-    text-decoration: none;
-    padding: 15px 20px;
-    border-radius: 4px;
-}
+
 
 h2 {
     color: #0e6e1d;
@@ -143,9 +115,7 @@ ul {
     padding: 0;
 }
 
-.container {
-  margin-top: 5px;
-}
+
 
 @media (max-width: 960px) {
     /* For a screen < 960px, this CSS will be read */
@@ -167,7 +137,7 @@ ul {
   }
 
 
-  
+#burger
 
   .burger {
     display: flex;
@@ -175,15 +145,19 @@ ul {
     justify-content: space-between;
     width: 100px;
     height: 32px;
-    position: absolute;
-    right: 150px;
+    position:absolute; 
+    float:right;
+  
+    
   }
   .burger .dash {
     width: 50px;
     height: 5px;
-    background: black;
+    background: #fff;
     border-radius: 20px;
     transition: 0.25s;
+    margin-bottom: 6px;
+    
   }
   
   .burger .dash:nth-of-type(4) {
@@ -203,3 +177,76 @@ ul {
     transform: rotate(-45deg);
   }
   
+
+#button
+.custom-button:hover{
+  text-decoration:none;
+  color: #272838;
+  background-color:#fff;
+/*   border-radius:4px; */
+}
+.custom-button{
+  text-decoration: none;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  margin-top: 30px;
+  padding: 1em 2rem;
+  font-size:20px;
+  position:relative;
+  transition: all .5s
+
+  
+}
+.custom-button::before,
+.custom-button::after{
+  content:"";
+  position:absolute;
+  width:3rem;
+  height:3rem;
+  border-style: solid;
+  border-color: #fff;
+  transition: all .5s
+}
+.custom-button::before{
+  top: -1.7rem;
+  left:-1.7rem;
+  border-width: 3px 0 0 3px;
+}
+.custom-button::after{
+  bottom:-1.5rem;
+  right:-1.5rem;
+  border-width: 0px 3px 3px 0px;
+}
+
+.custom-button:hover::before,
+.custom-button:hover::after{
+  width:calc(100% + 3rem);
+  height:calc(100% + 3rem);
+  border-color:#fff;
+}
+
+
+
+.movingline {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: dash 20s linear forwards;
+  position: relative;
+  z-index: -10;
+  
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#BGline {
+  position: absolute;
+  z-index: -5;
+  
+  top: -200px;
+
+
+}

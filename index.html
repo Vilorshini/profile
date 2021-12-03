@@ -10,7 +10,15 @@
   </head>
 
   <body>
-    
+    <div id="moving-lines">
+      <svg id="BGline" xmlns="http://www.w3.org/2000/svg" width="712" height="2040">
+        <g fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-width="4">
+          <path class ="pathgrey" stroke="#E9ECF0" d="M669.363 44v166.953c.077 80.667-34.63 121-104.124 121H166.363C83.454 332.138 42 367.793 42 438.918v786.461c3.964 67.065 45.418 100.598 124.363 100.598h380.758c81.495-7.196 122.242 32.464 122.242 118.98v592.21" />
+          <path class ="pathgrey" stroke="#E9ECF0" d="M629.368 2l-.005 225.988c.077 80.667-34.63 121-104.124 121H126.363C43.454 349.173 2 384.828 2 455.953v727.426c3.964 67.065 45.418 100.598 124.363 100.598h380.758c81.495-7.196 122.242 32.464 122.242 118.98l.005 633.752" />
+          <path class= "movingline" id="myline" stroke="#6ABA4F" d="M709.363 23v166.953c.077 80.667-34.63 121-104.124 121H206.363C123.454 311.138 82 346.793 82 417.918v786.461c3.964 67.065 45.418 100.598 124.363 100.598h380.758c81.495-7.196 122.242 32.464 122.242 118.98v612.211" />
+        </g>
+      </svg>
+  </div>
   
 
     <div class="container">
@@ -21,19 +29,26 @@
         <div class="dash"></div>
       </div>
       
-      <h1>Hello!I'm Vilorshini!<i class="far fa-smile-beam"></i></h1>
-      <h2> I am a junior web programmer</h2>
-      <img src="images/A+ Gallery_1.jpg" alt="My profile picture" id ="avatar">
-      <p>
-        Welcome to my profile! I am a Fine Arts graduate <br>
-        I love to explore new fields, proof you are reading this! <br>
-        I always had an interest for Coding and I saw an opportunity at <a href="https://www.lewagon.com/fr" class="link">Le Wagon</a>, I siezed it, an now Here i am as junior Web developer.
-        Discover more about me and my projects<i class="far fa-hand-point-down"></i>
-      </p>
-      <a href="https://iron-phone-629.notion.site/Vilorshini-Ramsamy-Web-Development-1f945d938a354e4ebe46353277bbfd1f" class="btn-blue">About me</a>
+      
+        <h1>Hello I am Vilorshini!</h1>     
+        <h2 class="typeing" data-typeingText="I am a junior web programmer"></h2><br>
+        <img src="images/A+ Gallery_1.jpg" alt="My profile picture" id ="avatar">
+        <p>
+          Welcome to my profile! I am a Fine Arts graduate <br>
+          I love to explore new fields, proof you are reading this! <br>
+          I always had an interest for Coding and I saw an opportunity at <a href="https://www.lewagon.com/fr" class="link">Le Wagon</a>.<br>
+          And now Here i am as junior Web developer.
+          Discover more about me and my projects<i class="far fa-hand-point-down"></i>
+        </p>
+        <a href="https://iron-phone-629.notion.site/Vilorshini-Ramsamy-Web-Development-1f945d938a354e4ebe46353277bbfd1f" class="custom-button">About me</a>
     </div>
-    <script src="index.js">
-    </script>
+
+    <div class="container project">      
+      <h3>My Projects</h3> 
+        <a href="#">> Easy Trip</a><br> 
+        <a href="#">> Reant an Island</a>
+    </div>
+  
   
   
   <div class="container">
@@ -49,8 +64,11 @@
         <a href="https://www.linkedin.com/in/vilorshiniramsamy/" class="social-link"><i class="fab fa-linkedin"></i></a>
       </li>
     </ul>        
-</div>  
+  </div>  
 
+  
+<script src="index.js">
+</script>
 
 </body>
 </html>
