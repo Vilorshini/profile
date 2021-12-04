@@ -23,7 +23,7 @@ let autoTypeText = () => {
 }
 setInterval(() => {
     autoTypeText()
-},175)
+},150)
 
 
 
